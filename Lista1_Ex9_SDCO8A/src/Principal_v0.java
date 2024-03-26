@@ -1,8 +1,10 @@
 
 /**
  * Lab0: Leitura de Base de Dados N�o-Distribuida
- *
- * Autor: Lucio A. Rocha Ultima atualizacao: 20/02/2023
+ * Autor: Gabriel Finger Conte
+ * Ultima atualizacao: 26/03/2024
+ * 
+ * Adaptado de Lucio A. Rocha 
  *
  * Referencias: https://docs.oracle.com/javase/tutorial/essential/io
  *
@@ -11,12 +13,8 @@ import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.security.SecureRandom;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
 import java.util.Scanner;
-import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
