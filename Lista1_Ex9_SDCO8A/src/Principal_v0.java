@@ -151,7 +151,10 @@ public class Principal_v0 {
                 StringBuffer new_fortune = new StringBuffer();
                 String inserir_flag = "n";
                 while (!inserir_flag.equalsIgnoreCase("S")) {
+                    // Reinicia o construtor da nova fortuna
                     new_fortune = new StringBuffer();
+                    // Adiciona uma quebra de linha inicial
+                    new_fortune.append("\n");
                     // Solicita ao usuário fornecer a nova fortuna
                     System.out.println("Insira a nova fortuna para o arquivo:");
                     // Enquanto o usuário não fornecer uma linha vazia
@@ -160,17 +163,17 @@ public class Principal_v0 {
                         // Lê e a outra linha da nova fortuna
                         new_line = sc.nextLine();
                         // Adiciona a nova linha a fortuna
-                        new_fortune.append(new_line + "\n");
+                        new_fortune.append(new_line).append("\n");
                     } while (!new_line.isEmpty());// do While
                     // Solicita ao usuário se essa é mesmo a fortuna que deseja inserir:
                     System.out.println("Deseja inserir ao arquivo a fortuna:");
-                    System.out.println("\"" + new_fortune.toString() + "\" ? (s/n)");
+                    System.out.println("\"" + new_fortune.toString().substring(0,new_fortune.toString().length()-1) + "\" ? (s/n)");
                     inserir_flag = sc.nextLine().strip();
                     
                 }// while
 
                 // Tenta adicionar a nova fortuna no arquivo
-                file.append(new_fortune.toString() + "\n%\n");
+                file.append(new_fortune.toString().substring(0,new_fortune.toString().length()-1) + "\n%\n");
                 
                 // Tenta fechar o arquivo para salvar as alterações
                 file.close();
