@@ -6,6 +6,7 @@ Este repositório contém códigos desenvolvidos na disciplina de Sistemas Distr
 
 Os códigos neste repositório são relacionados ao desenvolvimento de sistemas distribuídos, abordando conceitos como comunicação remota, programação cliente-servidor, uso de RMI (Remote Method Invocation), entre outros tópicos relevantes para a disciplina de Sistemas Distribuídos.
 Todos os códigos foram desenvolvidos na IDE Apache NetBeans, constando todo o projeto padrão criado ao utilizar a IDE. Caso deseje visualizar o código em si, acesse a pasta `src`.
+Para a realização dos presentes trabalhos, utilizou-se como referência para adaptação os códigos disponibilizados no repositório [sdco8a](https://github.com/sdco8a/) do GitHub.
 
 ## Estrutura do Repositório
 
