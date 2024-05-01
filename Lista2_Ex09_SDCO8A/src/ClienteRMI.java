@@ -3,7 +3,7 @@
  * Laboratorio 3
  * Autor: Gabriel Finger Conte
  * Adaptado de: Lucio Agostinho Rocha
- * Ultima atualizacao: 29/04/2023
+ * Ultima atualizacao: 01/05/2023
  */
 
 import java.rmi.registry.LocateRegistry; // Importa a classe LocateRegistry do pacote java.rmi.registry
@@ -11,14 +11,12 @@ import java.rmi.registry.Registry; // Importa a classe Registry do pacote java.r
 import java.util.Scanner; // Importa a classe Scanner do pacote java.util
 
 /**
- * Esta classe representa o cliente para comunicação RMI com o servidor de
- * fortunas.
+ * Esta classe representa o cliente para comunicação RMI com o servidor de fortunas.
  */
 public class ClienteRMI {
 
     /**
-     * Método privado para decodificar a resposta do servidor e extrair a
-     * fortuna.
+     * Método privado para decodificar a resposta do servidor e extrair a fortuna.
      *
      * @param resposta A resposta do servidor.
      * @return A fortuna decodificada.
@@ -69,9 +67,7 @@ public class ClienteRMI {
             System.out.println("Deseja inserir ao arquivo a fortuna:");
             System.out.println("\"" + new_fortune.toString().substring(0, new_fortune.toString().length() - 1) + "\" ? (s/n)");
             inserir_flag = leitura.nextLine().strip();
-
         }// while
-
         return new_fortune.toString();
     }
 
@@ -83,8 +79,7 @@ public class ClienteRMI {
     private static void decode_writeResponse(String resposta) {
         // Verifica o retorno do servidor
         if (resposta.contains("false")) {
-            System.err.println("Por favor, deixe uma quebra de linha ao final"
-                    + " da nova fortuna para manter o padrão dos registros!");
+            System.err.println("Por favor, deixe uma quebra de linha ao final da nova fortuna para manter o padrão dos registros!");
         } else if (resposta.contains("true")) {
             // Se deu tudo certo sai do loop e finaliza a função
             System.out.println("Nova fortuna adicionada com sucesso!");
@@ -96,8 +91,7 @@ public class ClienteRMI {
     /**
      * Método principal para execução do cliente RMI.
      *
-     * @param args Os argumentos da linha de comando (não utilizados neste
-     * exemplo).
+     * @param args Os argumentos da linha de comando (não utilizados neste exemplo).
      */
     public static void main(String[] args) {
         try {
@@ -119,7 +113,6 @@ public class ClienteRMI {
                     case "1": { // Caso a opção seja "1"
                         Mensagem mensagem = new Mensagem("", "read"); // Cria uma mensagem de leitura
                         String resposta = stub.enviar(mensagem).getMensagem(); // Envia a mensagem ao servidor e obtém a resposta
-                        //System.out.println(resposta.getMensagem());
                         String fortuna = decodeFortuna(resposta); // Decodifica a resposta para obter a fortuna
 
                         System.out.println("\n################\n"); // Exibe uma linha divisória
@@ -133,7 +126,6 @@ public class ClienteRMI {
                         String fortune = askUser_newFortuna(leitura); // Solicita ao usuário inserir uma nova fortuna
                         Mensagem mensagem = new Mensagem(fortune, "write"); // Cria uma mensagem de escrita com a nova fortuna
                         String resposta = stub.enviar(mensagem).getMensagem(); // Envia a mensagem ao servidor e obtém a resposta
-                        //System.out.println(resposta.getMensagem());
                         decode_writeResponse(resposta); // Decodifica e processa a resposta do servidor
                         break; // Sai do switch-case
                     }

@@ -3,7 +3,7 @@
  * Laboratorio 3
  * Autor: Gabriel Finger Conte
  * Adaptado de: Lucio Agostinho Rocha
- * Ultima atualizacao: 29/04/2023
+ * Ultima atualizacao: 01/05/2023
  */
 
 import java.io.*; // Importa as classes para manipulação de arquivos
@@ -171,28 +171,23 @@ public class Principal {
     }// Construtor
     
     /**
-     * Método para obter o FileReader.
-     * @return O FileReader.
-     */
-    public FileReader getFileReader(){
-        return this.fr; // Retorna o FileReader
-    }
-    
-    /**
      * Método para escrever uma nova fortuna no arquivo.
      * @param fortune A nova fortuna a ser adicionada.
+     * @return Verdadeiro se a adição for bem-sucedida, falso caso contrário.
      */
-    public void write(String fortune) {
+    public Boolean write(String fortune) {
         fr = new FileReader(); // Inicializa o FileReader
         try {
             NUM_FORTUNES = fr.countFortunes(); // Obtém o número total de fortunas
             HashMap hm = new HashMap<Integer, String>(); // Cria um HashMap para armazenar as fortunas
             fr.parser(hm); // Analisa o arquivo e popula o HashMap
             fr.read(hm); // Lê uma fortuna aleatória do HashMap
-            fr.write(hm, fortune); // Adiciona a nova fortuna ao arquivo
+            return fr.write(hm, fortune); // Adiciona a nova fortuna ao arquivo
         } catch (FileNotFoundException e) { // Captura exceções de arquivo não encontrado
+            System.err.println("Erro ao tentar escrever a nova fortuna!");
             e.printStackTrace(); // Imprime o rastreamento da pilha de exceções
         }
+        return false;
     }
 
     /**
@@ -209,6 +204,7 @@ public class Principal {
             fr.parser(hm); // Analisa o arquivo e popula o HashMap
             result = fr.read(hm); // Lê uma fortuna aleatória do HashMap
         } catch (FileNotFoundException e) { // Captura exceções de arquivo não encontrado
+            System.err.println("Erro ao tentar ler a nova fortuna!");
             e.printStackTrace(); // Imprime o rastreamento da pilha de exceções
         }
         return result; // Retorna a fortuna lida
