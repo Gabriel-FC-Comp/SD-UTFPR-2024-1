@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>LibraryClient</title>
+</h:head>
+<h:body>
+    <h1>Welcome to the Digital Library</h1>
+    <br/>
+
+    <!-- Formulário para consultar livro -->
+    <h:form>
+        <h:outputLabel for="consultTitle" value="Title of the book: " />
+        <h:inputText id="consultTitle" value="#{JSFSoapRequest.consultTitle}" />
+        <h:commandButton value="Consult" action="#{JSFSoapRequest.consultBook()}" />
+    </h:form>
+
+    <br/>
+    <hr/>
+
+    <!-- Formulário para reservar livro -->
+    <h:form>
+        <h:outputLabel for="reserveTitle" value="Title of the book: " />
+        <h:inputText id="reserveTitle" value="#{JSFSoapRequest.reserveTitle}" />
+        <h:commandButton value="Reserve" action="#{JSFSoapRequest.reserveBook()}" />
+    </h:form>
+
+    <br/>
+    <hr/>
+
+    <!-- Campo para indicar retorno do servidor -->
+    <h:outputLabel value="Server Response: " />
+    <h:outputText value="#{JSFSoapRequest.serverResponse}" />
+
+</h:body>
+</html>

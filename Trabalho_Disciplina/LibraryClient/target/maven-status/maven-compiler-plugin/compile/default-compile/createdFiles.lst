@@ -1,0 +1,9 @@
+br/interfaces/MessageRMI.class
+br/edu/utfpr/libraryclient/JakartaRestConfiguration.class
+br/ejb/EJBSoapRequest.class
+br/interfaces/package-info.class
+br/edu/utfpr/libraryclient/resources/JakartaEE91Resource.class
+br/jsf/JSFSoapRequest.class
+br/soap/ISoapServices.class
+br/soap/SoapServiceService.class
+br/interfaces/ObjectFactory.class

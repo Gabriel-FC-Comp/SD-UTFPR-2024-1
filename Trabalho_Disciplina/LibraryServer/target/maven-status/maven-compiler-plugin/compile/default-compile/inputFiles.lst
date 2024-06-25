@@ -1,0 +1,17 @@
+/home/ticnic/NetBeansProjects/LibraryServer/src/main/java/br/interfaces/ISoapServices.java
+/home/ticnic/NetBeansProjects/LibraryServer/src/main/java/br/data/Reserva.java
+/home/ticnic/NetBeansProjects/LibraryServer/src/main/java/br/rmi/ClientRMI.java
+/home/ticnic/NetBeansProjects/LibraryServer/src/main/java/br/rmi/ServerRMI.java
+/home/ticnic/NetBeansProjects/LibraryServer/src/main/java/br/soap/SoapService.java
+/home/ticnic/NetBeansProjects/LibraryServer/src/main/java/br/data/ActionType.java
+/home/ticnic/NetBeansProjects/LibraryServer/src/main/java/br/data/OperationType.java
+/home/ticnic/NetBeansProjects/LibraryServer/src/main/java/br/data/CustomLock.java
+/home/ticnic/NetBeansProjects/LibraryServer/src/main/java/br/data/Operation.java
+/home/ticnic/NetBeansProjects/LibraryServer/src/main/java/br/data/LockType.java
+/home/ticnic/NetBeansProjects/LibraryServer/src/main/java/br/edu/utfpr/libraryserver/LibraryServer.java
+/home/ticnic/NetBeansProjects/LibraryServer/src/main/java/br/soap/SoapServer.java
+/home/ticnic/NetBeansProjects/LibraryServer/src/main/java/br/data/Book.java
+/home/ticnic/NetBeansProjects/LibraryServer/src/main/java/br/interfaces/IMessageRMI.java
+/home/ticnic/NetBeansProjects/LibraryServer/src/main/java/br/rmi/MessageRMI.java
+/home/ticnic/NetBeansProjects/LibraryServer/src/main/java/br/rmi/ServerResponse.java
+/home/ticnic/NetBeansProjects/LibraryServer/src/main/java/br/data/SharedResourcesManager.java
